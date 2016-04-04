@@ -1,7 +1,13 @@
 ---
-layout: default
+layout: news
 ---
 
-<h1>This is new page</h1>
-<p>New Page</p>
-<p>New page</p>
+<h1>First Post</h1>
+<ul>
+	{% for new in site.categories.new limit:2 %}
+	<li>
+		<a href="{{site.baseurl}}{{new.url}}">{{new.title}}</a>
+		<p>{{new.meta}}</p>	 
+	</li>
+	{% endfor %}
+</ul>

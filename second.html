@@ -1,0 +1,14 @@
+---
+layout: useForSecond
+---
+
+<h1>Second Post</h1>
+
+<ul>
+	{% for info in site.categories.second %}
+	<li>
+		<a href="{{site.baseurl}}{{info.url}}">{{info.title}}</a>
+		<p>{{info.meta}}</p>
+	</li>
+	{% endfor %}
+</ul>
